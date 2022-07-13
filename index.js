@@ -1,73 +1,48 @@
 
-
-
-//Esta es una funcion
-
-/*function showFullname(){
- return "Jhonatan Quispe"
-}*/
-
-//objeto que contiene propiedades
-
-const user = {
+const user1 = {
 
     name: "Jhonatan",//propiedad
     lastname: "Quispe",
     age: 32,
 
-    //se va convertir la funcion como metodo
-
-    //showFullname: showFullname 
-
-    //una forma de llamar el metodo
-    /*  showFullname: function(){
-       return "Jhonatan Quispe"
-      }*/
-    //otra forma de llamar el metodo
-
     showFullname() {
-        
-        //console.log(this.name);
-        //return "Jhonatan Quispe"
 
-        return this.name+" "+this.lastname;
+        //una forma
+        /*return this.name+" "+this.lastname;*/
+
+        //otra formac
+        return `${this.name} ${this.lastname}`;
 
     }
 
 }
 
-console.log(user.showFullname());
-
-
-const account ={
-
-       number :"123456789",
-       amount: 100,
-
-       //agrego un parametro a la funcion "quantity"
-       deposit(quantity){
-            //this.amount = this.amount + 100;
-            this.amount+=quantity
-
-       },
-
-       withdraw(quantity){
-           
-        this.amount-=quantity;
-
-       }
-
-
-
+//constructor
+function Persona(){
+         
+    this.name = ""
+    this.lastname=""
+    this.age= 0
+    this.showFullname = function(){
+        return `${this.name} ${this.lastname}`
+    }
+    
 }
 
-account.deposit(100);
-account.deposit(50);
-account.deposit(10);
-console.log(account);
+const user2  = new Persona()
+user2.name="Jhonatan"
+user2.age="32"
+user2.lastname="Quispe"
+console.log(user2.showFullname())
 
-account.withdraw(10);
-account.withdraw(200);
-console.log(account);
+const user3  = new Persona()
+user3.name="Alejo"
+user3.lastname="sarmiento"
+const user4 = new Persona()
+const user5 = new Persona()
+
+console.log(user3,user4,user5)
+
+
 
 
