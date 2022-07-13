@@ -1,73 +1,39 @@
 
+// el constructor object es igual que instanciarlo a como ponerle entre {}
 
-
-//Esta es una funcion
-
-/*function showFullname(){
- return "Jhonatan Quispe"
-}*/
-
-//objeto que contiene propiedades
-
-const user = {
-
-    name: "Jhonatan",//propiedad
-    lastname: "Quispe",
-    age: 32,
-
-    //se va convertir la funcion como metodo
-
-    //showFullname: showFullname 
-
-    //una forma de llamar el metodo
-    /*  showFullname: function(){
-       return "Jhonatan Quispe"
-      }*/
-    //otra forma de llamar el metodo
-
-    showFullname() {
-        
-        //console.log(this.name);
-        //return "Jhonatan Quispe"
-
-        return this.name+" "+this.lastname;
-
+/*
+function Person(name,lastname){
+    this.name = name
+    this.lastname= lastname
+    this.displayName = function(){
+       return `${this.name} ${this.lastname}`
     }
+}
+
+const Jhonatan = new Person("Jhonatan","Quispe")
+const Alejo = new Person("Alejo","Sarmiento")
+const Maria = new Person("Maria","Salvador")
+const Jose = new Person("Jose","Castillo")
+
+Person.prototype.greet = function(){
+
+     return `hello iam ${this.name}`
 
 }
 
-console.log(user.showFullname());
+Person.prototype.age = 100
 
+console.log(Jhonatan.age)
+console.log(Alejo.age)
+console.log(Maria.age)
+console.log(Jose.age)*/
 
-const account ={
+const s = new String("Hola")
 
-       number :"123456789",
-       amount: 100,
-
-       //agrego un parametro a la funcion "quantity"
-       deposit(quantity){
-            //this.amount = this.amount + 100;
-            this.amount+=quantity
-
-       },
-
-       withdraw(quantity){
-           
-        this.amount-=quantity;
-
-       }
-
-
+String.prototype.concatTest = function (){
+          
+   return this + " Test";
 
 }
 
-account.deposit(100);
-account.deposit(50);
-account.deposit(10);
-console.log(account);
-
-account.withdraw(10);
-account.withdraw(200);
-console.log(account);
-
-
+console.log(s.concatTest())
