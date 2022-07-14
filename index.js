@@ -1,28 +1,21 @@
-//class y funcion en constructor son lo mismo
 
-const company = {
-name: "google",
-employees:[]
+
+//un objeto no puede ser independiente de otro objeto
+
+const person = {
+         name: 'John',
+         locaname : 'London',
+
+         addres:{
+                street: '123 Main Street',
+                city: 'London',
+                country: 'UK'
+         }
+
 }
 
-class Persona {
-
-    constructor(nombre,apellido){
-
-        this.nombre = nombre;
-        this.apellido = apellido;
-
-    }
+addres:{
+    street: '123 Main Street',
+    city: 'London',
+    country: 'UK'
 }
-
-const jhon = new Persona('jhon','doe');
-const maria =  new Persona('maria','lopez');
-
-company.employees.push(jhon);
-company.employees.push(maria);
-
-
-console.log(maria);
-console.log(jhon);
-
-console.log(company);
