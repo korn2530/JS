@@ -1,53 +1,58 @@
 
 
-//(Encapsulamiento)Simplifica el uso del objeto, sin que el usuario sepa que hay en el interior.
+//(Herencia).
 /*
-const company = {
-         
-    name: "Rocketseat",
-    employes:[],
-
-    sortEmployes: function(){
-
-    }
-
+function Persona(){
+    this.name = "";
+    this.lastame = "";
 }
 
 
-//a la propiedad sortemployees lo convierto en string 
-company.sortEmployes = "adadasdas"
+function Programmer(){
 
-company.sortEmployes()
-*/
+    this.language = "";
+}
 
+Programmer.prototype = new Persona();
 
-function Company(name){
+console.log(Programmer);
+console.log(Persona);
 
-    let employes = [];
-     this.name = name;
+const persona = new Persona();
+persona.name = "Jhonatan";
+persona.lastame = "Doe";
+console.log(persona);
 
-     this.getEmployes = function(){
-         return employes;
-     }
+const programmer = new Programmer();
+programmer.name = "Juan";
+programmer.lastame= "Perez";
+programmer.language = "JavaScript";
 
-     this.addEmployes = function(employe) {
-         employes.push(employe);
+console.log(programmer);*/
+
+class Persona{
+
+     constructor(name, lastame){
+            this.name = name
+            this.lastame = lastame
+            this.age = null
      }
 
 }
 
-const company = new Company("Rocketseat");
-const company2 = new Company("pepsi");
+class Programmer extends Persona{
+     constructor(language, name, lastame){
+      super( name, lastame);
+       this.language = language
 
-console.log(company);
-console.log(company2);
+     }
 
-company.addEmployes({name: "Diego"});
-company2.addEmployes({name: "Diego"});
+}
 
+const persona= new Persona("Jhonatan", "Quispe");
 
-console.log(company.getEmployes());
-console.log(company2.getEmployes());
+console.log(persona);
 
+const programmer = new Programmer("Teresa", "Quispe", "JavaScript");
 
-
+console.log(programmer);
