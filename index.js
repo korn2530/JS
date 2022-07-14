@@ -1,58 +1,21 @@
 
 
-//(Herencia).
-/*
-function Persona(){
-    this.name = "";
-    this.lastame = "";
+//(Polimofismo).sobrecarga de metodos que permite tomar parametros con diferentes tipo de datos. 
+//Parametros genericos
+
+function countItems(x){
+
+      return x.toString().length;
 }
 
+console.log(countItems(5));
+console.log(countItems("Hola"));
 
-function Programmer(){
 
-    this.language = "";
-}
+function sum(x=0,y=0,z=0){
 
-Programmer.prototype = new Persona();
-
-console.log(Programmer);
-console.log(Persona);
-
-const persona = new Persona();
-persona.name = "Jhonatan";
-persona.lastame = "Doe";
-console.log(persona);
-
-const programmer = new Programmer();
-programmer.name = "Juan";
-programmer.lastame= "Perez";
-programmer.language = "JavaScript";
-
-console.log(programmer);*/
-
-class Persona{
-
-     constructor(name, lastame){
-            this.name = name
-            this.lastame = lastame
-            this.age = null
-     }
+      return x+y+z;
 
 }
 
-class Programmer extends Persona{
-     constructor(language, name, lastame){
-      super( name, lastame);
-       this.language = language
-
-     }
-
-}
-
-const persona= new Persona("Jhonatan", "Quispe");
-
-console.log(persona);
-
-const programmer = new Programmer("Teresa", "Quispe", "JavaScript");
-
-console.log(programmer);
+console.log(sum(5,5,5));
