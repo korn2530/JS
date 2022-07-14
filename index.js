@@ -1,5 +1,9 @@
 //class y funcion en constructor son lo mismo
 
+const company = {
+name: "google",
+employees:[]
+}
 
 class Persona {
 
@@ -14,8 +18,11 @@ class Persona {
 const jhon = new Persona('jhon','doe');
 const maria =  new Persona('maria','lopez');
 
-//relation
-maria.parent = jhon;
+company.employees.push(jhon);
+company.employees.push(maria);
+
 
 console.log(maria);
 console.log(jhon);
+
+console.log(company);
