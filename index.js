@@ -1,21 +1,21 @@
 
 
-//(Polimofismo).sobrecarga de metodos que permite tomar parametros con diferentes tipo de datos. 
-//Parametros genericos
+//(Polimofismo Parametricos
 
-function countItems(x){
+function Stack(){
+ 
+         this.item = [];
 
-      return x.toString().length;
+         this.push = function(element){
+             this.item.push(element);
+         }
 }
 
-console.log(countItems(5));
-console.log(countItems("Hola"));
+const stack = new Stack();
+stack.push(1);
 
+const stack2 = new Stack();
+stack2.push("asda");
 
-function sum(x=0,y=0,z=0){
-
-      return x+y+z;
-
-}
-
-console.log(sum(5,5,5));
+console.log(stack);
+console.log(stack2);
