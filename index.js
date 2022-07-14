@@ -1,39 +1,38 @@
+//class y funcion en constructor son lo mismo
 
-// el constructor object es igual que instanciarlo a como ponerle entre {}
 
-/*
-function Person(name,lastname){
-    this.name = name
-    this.lastname= lastname
-    this.displayName = function(){
-       return `${this.name} ${this.lastname}`
+class Persona {
+
+    constructor(nombre,apellido){
+        this.nombre = nombre;
+        this.apellido = apellido;
+
     }
-}
 
-const Jhonatan = new Person("Jhonatan","Quispe")
-const Alejo = new Person("Alejo","Sarmiento")
-const Maria = new Person("Maria","Salvador")
-const Jose = new Person("Jose","Castillo")
-
-Person.prototype.greet = function(){
-
-     return `hello iam ${this.name}`
+    greet(){
+         
+           return `hello i am  ${this.nombre} ${this.apellido}`;
+    }
 
 }
 
-Person.prototype.age = 100
 
-console.log(Jhonatan.age)
-console.log(Alejo.age)
-console.log(Maria.age)
-console.log(Jose.age)*/
 
-const s = new String("Hola")
 
-String.prototype.concatTest = function (){
-          
-   return this + " Test";
 
-}
+const user = new Persona("Jhon", "Doec");
+const user2 = new Persona("Jane", "Doe");
 
-console.log(s.concatTest())
+console.log(user.greet());
+console.log(user2.greet());
+
+console.log(typeof Persona);
+
+
+/*function Persona() {
+
+    this.nombre = "";
+    this.apellido = "";
+
+      
+}*/
