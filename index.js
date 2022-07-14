@@ -4,35 +4,18 @@
 class Persona {
 
     constructor(nombre,apellido){
+
         this.nombre = nombre;
         this.apellido = apellido;
 
     }
-
-    greet(){
-         
-           return `hello i am  ${this.nombre} ${this.apellido}`;
-    }
-
 }
 
+const jhon = new Persona('jhon','doe');
+const maria =  new Persona('maria','lopez');
 
+//relation
+maria.parent = jhon;
 
-
-
-const user = new Persona("Jhon", "Doec");
-const user2 = new Persona("Jane", "Doe");
-
-console.log(user.greet());
-console.log(user2.greet());
-
-console.log(typeof Persona);
-
-
-/*function Persona() {
-
-    this.nombre = "";
-    this.apellido = "";
-
-      
-}*/
+console.log(maria);
+console.log(jhon);
